@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    margin:auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header{
+    height:70px;
+    border-bottom: 2px solid #000;
+    background-color: #000;
+}
+
+.header.container{
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    list-style: none; /* tira os pontinhos da lista*/
+    color: white;
+    gap: 40px; /* da um espaço entre os itens*/
+}
+
+.logo img{
+ width: fit-content;/* se adapta ao tamanho da navbar*/
+ height: 65px;
+ padding-top: 5px;
+}
+
+.container2{
+    display: flex;
+    justify-content: end;
+    gap: 35px;
+}
+
+.header.container2{
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+/* Fim do header */
+
+.cadastro_img{
+  width: 50%;
+  height: 92vh;
+}
+
+
+.cadastro_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cadastro{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 215px;
+  padding-top: 25px;
+  padding-right: 200px;
+}
+
+.formulario .logo{
+  display: flex;
+  margin-bottom: 0px;
+  margin-left: 110px;
+  padding-top: 50px;
+
+}
+
+.formulario .logo img{
+  height: 100px;
+}
+
+.formulario .mensagem{
+ margin-bottom: 10px;
+ margin-right: 40px;
+}
+
+.formulario .mensagem p{
+ font-size: 20px;
+ color: black;
+ font-weight: bold;
+ padding-left: 90px; /* margin-left: 10px;
+ margin-bottom: 0px;
+ margin-top: 0px; */
+}
+
+.campo input{
+ width: 350px;
+ height: 30px;
+ border-color: #565355;
+ border-radius: 5px;
+ box-shadow: 2px 2px 2px gray;
+}
+
+.formulario .campo{
+    margin-bottom: 10px;
+}
+
+.formulario .campo p{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.botao{
+    display: flex;
+    margin: 70px;
+    margin-top: 10px;
+}
+
+.botao button{
+    height: 35px;
+    width: 200px;
+    background-color:#14213D ;
+    color: white;
+    font-size: 18px;
+    font-weight:bold ;
+    border-radius: 9px;
+    box-shadow: 2px 2px 2px gray;
+
+}
