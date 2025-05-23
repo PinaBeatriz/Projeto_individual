@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+     <!-- HEADER INICIO -->
+    <div class="header">
+      <div class="navbar">
+        <div class="logo"> <img src="./assets/Log_branca.png" alt=""/></div>
+        <ul class="elementos1">
+          <li><a href="./index.html">HOME</a> </li>
+          <li><a href="./quiz.html">QUIZ</a></li>
+        </ul>
+        <ul class="elementos2">
+          <li><a href="./cadastro.html">CADASTRO</a></li>
+          <li><a href="./login.html">LOGIN</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- HEADER FINAL -->
+     
+    <div class="cadastro">
+      <div class="cadastro_img">
+          <img src="./assets/Login_img.png" alt="" />
+        </div>
+      <div class="formulario">
+        <div class="logo">
+          <img src="./assets/Logo_preta.png" alt="" />
+        </div>
+        <div class="mensagem">
+          <p>CADASTRE-SE</p>
+        </div>
+        <div class="campo">
+          <p>Email</p>
+          <input type="text" id="input_email" />
+          <p>Senha</p>
+          <input type="text" id="input_senha" />
+        </div>
+        <div class="botao">
+          <button onclick="entrar()">Entrar</button>
+        </div>
+        <div class="msgcad">
+           <p>Ainda não tem conta? <a href="./cadastro.html">Cadastre-se</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+
+ function entrar() {
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            //mensagem de campos em branco  
+
+            return false;
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL = json.email;
+                    sessionStorage.NOME = json.nome;
+                    sessionStorage.ID = json.id;
+                    setTimeout(function () {
+                        window.location = "quiz.html"; // caminho para o arquivo da dash
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+
+</script>

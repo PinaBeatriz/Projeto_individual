@@ -5,7 +5,7 @@ body{
     overflow: hidden;
 }
 
-.container{
+.navbar{
     display: flex;
     width: 80%;
     margin:auto;
@@ -19,7 +19,7 @@ body{
     background-color: #000;
 }
 
-.header.container{
+.header.navbar{
     justify-content: space-between;
     align-items: center;
     height: 100%;
@@ -33,13 +33,14 @@ body{
 }
 
 
-.navbar{
+.elementos1{
     display: flex;
     align-items: center; 
     justify-content: space-between;
     list-style: none; /* tira os pontinhos da lista*/
     color: white;
-    gap: 40px; /* da um espaço entre os itens*/
+    gap: 50px; /* da um espaço entre os itens*/
+    padding-left: 125px;
 }
 
 .logo img{
@@ -48,25 +49,22 @@ body{
  padding-top: 5px;
 }
 
-.container2{
+.elementos2{
     display: flex;
     justify-content: end;
     gap: 35px;
 }
 
-.header.container2{
+.header.elementos2{
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 /* final do header*/
 
+
 .cadastro{
-    /* display: flex;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%; */
-    display: flex;
+  display: flex;
   width: 100%;
   height: 100vh;
 }
@@ -101,9 +99,7 @@ body{
  font-size: 20px;
  color: black;
  font-weight: bold;
- padding-left: 90px; /* margin-left: 10px;
- margin-bottom: 0px;
- margin-top: 0px; */
+ padding-left: 90px;
 }
 
 .campo input{
@@ -127,6 +123,7 @@ body{
     display: flex;
     margin: 70px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .botao button{
@@ -138,24 +135,28 @@ body{
     font-weight:bold ;
     border-radius: 9px;
     box-shadow: 2px 2px 2px gray;
+}
 
+button:hover {
+background-color: #1e376e;
 }
 
 .cadastro_img{
-    /* display: flex;
-   width: 700px;
-   height: 900px;
-   margin-left: 300px; */
   width: 50%;
   height: 90vh;
 }
 
 
 .cadastro_img img{
-    /* height: 100vh;
-    width: 700px;
-    padding-right: 10px; */
     width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.msglog p{
+ font-weight: bold;
+}
+
+.msglog a{
+ color: #FCA311;
 }

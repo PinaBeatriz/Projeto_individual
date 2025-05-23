@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
 body{
     margin: 0;
     padding: 0;
     background-color: #E5E5E5;
     overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+
 }
 
-.container{
+.navbar{
     display: flex;
     width: 80%;
     margin:auto;
@@ -19,7 +22,7 @@ body{
     background-color: #000;
 }
 
-.header.container{
+.header.navbar{
     justify-content: space-between;
     align-items: center;
     height: 100%;
@@ -33,13 +36,14 @@ body{
 }
 
 
-.navbar{
+.elementos1{
     display: flex;
     align-items: center; 
     justify-content: space-between;
     list-style: none; /* tira os pontinhos da lista*/
     color: white;
-    gap: 40px; /* da um espaço entre os itens*/
+    gap: 50px; /* da um espaço entre os itens*/
+    padding-left: 125px;
 }
 
 .logo img{
@@ -48,18 +52,19 @@ body{
  padding-top: 5px;
 }
 
-.container2{
+.elementos2{
     display: flex;
     justify-content: end;
     gap: 35px;
 }
 
-.header.container2{
+.header.elementos2{
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
-/* Fim do header */
+/* final do header*/
+
 
 .cadastro_img{
   width: 50%;
@@ -110,9 +115,8 @@ body{
  font-size: 20px;
  color: black;
  font-weight: bold;
- padding-left: 90px; /* margin-left: 10px;
- margin-bottom: 0px;
- margin-top: 0px; */
+ padding-left: 90px;
+
 }
 
 .campo input{
@@ -141,11 +145,25 @@ body{
 .botao button{
     height: 35px;
     width: 200px;
-    background-color:#14213D ;
+    background-color:#14213D;
     color: white;
     font-size: 18px;
     font-weight:bold ;
     border-radius: 9px;
     box-shadow: 2px 2px 2px gray;
+}
+
+button:hover {
+background-color: #1e376e;
+}
+
+.msgcad p{
+  font-weight: bold;
+  padding-left: 50px;
+  margin-top: 8px;
+}
+.msgcad a{
+  color: #FCA311;
+  font-weight: bold;
 
 }

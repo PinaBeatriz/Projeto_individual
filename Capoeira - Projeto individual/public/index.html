@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- HEADER INICIO -->
+    <div class="header">
+      <div class="navbar">
+        <div class="logo"><img src="./assets/Log_branca.png" alt="" /></div>
+        <ul class="elementos1">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./quiz.html">QUIZ</a></li>
+        </ul>
+        <ul class="elementos2">
+          <li><a href="./cadastro.html">CADASTRO</a></li>
+          <li><a href="./login.html">LOGIN</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- HEADER FINAL -->
+
+    <div class="principal">
+      <div class="principal_titulo">
+        <h1>CAPOEIRA</h1>
+        <div class="frase">
+          <p>
+            Ginga que transforma. Luta que conecta. <br />
+            Cultura que vive.
+          </p>
+        </div>
+        <div class="botao">
+        <button onclick="Clicar()" id="saiba">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="imgprincipal">
+        <img src="assets/Lateral_direita_index.png" alt="" />
+      </div>
+    </div>
+    <div class="principal2">
+      <div class="principalimg">
+        <img src="assets/Lateral_esquerda_index.png" alt="" />
+      </div>
+      <div class="containerhome">
+        <div class="principal_texto">
+          <h1>HISTÓRIA</h1>
+        </div>
+        <div class="frase">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+            commodi rerum illo, accusamus itaque dolorum? <br />Fugit
+            accusantium fugiat ea consectetur voluptate, doloremque voluptas
+            omnis necessitatibus praesentium? Similique esse deleniti debitis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="containerhome2">
+      <div class="principal_titulo">
+        <h1>CURIOSIDADES</h1>
+      </div>
+      <div class="frase2">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa commodi
+          rerum illo, accusamus itaque dolorum?<br />
+          Fugit accusantium fugiat ea consectetur voluptate, doloremque voluptas
+          omnis necessitatibus praesentium? Similique esse deleniti debitis.
+        </p>
+      </div>
+    </div>
+
+    <div class="carrossel">
+      <h3>FASES DE GRADUAÇÃO</h3>
+      
+      <h3>Fase 1: Capoeira Infantil com até 14 anos</h3>
+      <br />
+
+     
+      <div class="parte2">
+          <div class="parte3"> 
+      <div class="parte1">
+      
+        
+          <div class="slider">
+            <div class="slide">
+              <img
+                src="assets/1.png"
+                alt="Descrição da imagem 1"
+              />
+            </div>
+            <div class="slide">
+              <img src="assets/2.png" alt="Descrição da imagem 2" />
+            </div>
+            <div class="slide">
+              <img
+                src="assets/3.png"
+                alt="Descrição da imagem 3"
+              />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const slides = document.querySelectorAll(".slide");  //document.querySelectorAll('.slide'): Seleciona todos os elementos com a classe "slide".
+  let currentSlide = 0;
+
+  function showSlide(index) {  //showSlide(index): Remove a classe "active" de todos os slides e a adiciona ao slide no índice especificado.
+    slides.forEach((slide) => slide.classList.remove("active")); // Remove a classe 'active' de todos os slides
+    slides[index].classList.add("active"); // Adiciona a classe 'active' ao slide atual
+  }
+
+  function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0; // Volta ao primeiro slide
+    }
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1; // Volta ao último slide
+    }
+    showSlide(currentSlide);
+  }
+
+  // Alternar slides automaticamente 
+  setInterval(nextSlide, 3000); 
+
+  // Ou para controlar com botões
+  /*
+document.getElementById('botao_proximo').addEventListener('click', nextSlide);
+document.getElementById('botao_anterior').addEventListener('click', prevSlide);
+*/
+
+  showSlide(0); // Mostra o primeiro slide inicialmente
+
+  //HTML: A estrutura define o contêiner da slider e cada slide com imagens.
+  //JavaScript:
+  //document.querySelectorAll('.slide'): Seleciona todos os elementos com a classe "slide".
+  //showSlide(index): Remove a classe "active" de todos os slides e a adiciona ao slide no índice especificado.
+  //nextSlide(): Move para o próximo slide, ou volta ao primeiro se chegar ao fim.
+  //prevSlide(): Move para o slide anterior, ou volta ao último se chegar ao início.
+  //setInterval(nextSlide, 3000): Chama nextSlide a cada 3 segundos
+
+  function Clicar(){
+    var saiba = document.getElementById("saiba")
+    
+    if(saiba){
+      saiba.scrollIntoView({behavior:"smooth"})
+    }
+  }
+</script>

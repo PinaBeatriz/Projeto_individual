@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+    min-height: 100vh; /* permitir que o conteúdo expanda troca*/
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden; /* Evita rolagem horizontal troca*/
+}
+
+
+.header{
+    height:70px;
+    border-bottom: 2px solid #000;
+    background-color: #000;
+    display: flex;
+}
+
+.navbar{
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin:auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+.elementos1{
+    display: flex;
+    align-items: center; 
+    list-style: none; /* tira os pontinhos da lista*/
+    color: white;
+    gap: 30px; /* da um espaço entre os itens*/
+    padding: 0;
+    margin: 0;
+}
+
+.logo img{
+ max-width: 100%;
+ height: 55px;
+ padding-top: 5px;
+}
+
+.elementos2{
+    display: flex;
+    gap: 20px;
+}
+
+.header.elementos2{
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+/* final do header*/
+
+
+/* Itens pagina principal*/
+
+.principal{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -1px;
+}
+  
+/*Texto capoeira*/
+.principal .principal_titulo h1{
+    display: flex;
+    margin-left: 120px;
+    margin-top: 125px;
+    margin-bottom: 0;
+    font-size: 100px;
+    font-style:italic;
+    padding: 0;
+    text-shadow: 3px 3px 3px gray; /* Desfoque, Deslocamento vertical, Deslocamento horizontal */
+}
+
+/*Texto Ginga que transforma. Luta que conecta.*/
+.principal_titulo .frase p{
+    display: flex;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 130px;
+    margin-top: 0;
+}
+
+.botao{
+    display: flex;
+    margin: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.principal_titulo .botao button{
+    margin-left: 60px;
+    margin-top: 0;
+    height: 40px;
+    width: 150px;
+    background-color: #000;
+    color: #ffff;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 18px
+}
+
+.botao button:hover {
+    background-color: rgb(57, 56, 56);
+    box-shadow: 10px 8px 8px gray;
+    color: #FCA311;
+}
+
+  
+.principal .principalimg img{
+ height: 120vh;
+ width: 80vh;
+    
+}
+
+.principal2 .principalimg{
+    margin-top: -20%;
+}
+
+.principal2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.principal2 .principal_texto h1{
+    margin-top: -10%;
+    font-size: 40px;
+    margin-left: 5%;
+    font-weight:700;
+}
+
+.principal2 .frase p{
+    margin-top: -10%;
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+    width: 90%;
+}
+
+.containerhome .frase{
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+.containerhome2{
+    margin-top: -250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.principal_titulo h1{
+    margin-left: 27%;
+    font-weight:700;
+}
+
+.frase2 p{
+    margin-left: 27%;
+    margin-top: -10%;
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+ 
+}
+
+.carrossel{
+    gap: 15px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 110vh;
+    background-color: #14213D;
+    margin-top: 15%;
+    
+}
+
+h3{
+        font-size: 30px;
+        color: white;
+}
+
+/* Carrossel */
+
+
+
+.slider {
+    
+  width: 800px;
+  height: 550px;
+  overflow: hidden; /* Oculta slides que não estão visíveis */
+     /* ✅ Efeito de sobreposição com sombras múltiplas */
+
+  
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none; /* Oculta todos os slides inicialmente */
+  
+  
+}
+
+.slide img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+ 
+}
+
+/* Estilo para o slide ativo */
+.active {
+  display: block; /* Mostra o slide ativo */
+}
+
+.parte1{
+  
+ align-items: center;
+    height: 105%;
+    border-radius: 20px;
+    display: flex;
+    width: 85%;
+    background: #ffffffb8;
+    justify-content: center;
+}
+
+.parte2{
+   
+    align-items: center;
+    height: 52%;
+    border-radius: 20px;
+    display: flex;
+    width: 77%;
+    background: #ffffff77;
+    justify-content: center;
+}
+
+.parte3{
+   
+
+    align-items: center;
+    height: 108%;
+    border-radius: 20px;
+    display: flex;
+    width: 88%;
+    background: #ffffff8a;
+    justify-content: center;
+}
+
+
+
+
+
+
