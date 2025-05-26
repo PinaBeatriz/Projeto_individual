@@ -23,19 +23,22 @@
     </div>
     <!-- HEADER FINAL -->
      
-    <div class="app">
+<!-- Tela de introdução -->
+    <div class="intro">
+        <h1>CapoQuiz</h1>
+        <p>Entre na roda do conhecimento e gingue no ritmo das perguntas e respostas sobre a nossa arte marcial brasileira!</p>
+        <button id="comecar-btn" onclick="iniciar()">Começar</button>
+    </div>
+
+    <!-- Tela do quiz -->
+    <div class="app" style="display: none;">
         <h1>CapoQuiz</h1>
         <div class="quiz">
             <h2 id="question">Pergunta</h2>
-            <div id="resposta=btn">
-                <button class="btn">resposta 1</button>
-                <button class="btn">resposta 2</button>
-                <button class="btn">resposta 3</button>
-                <button class="btn">resposta 4</button>
-            </div>
-            <button id="next=btn">Proxima</button>
+            <div id="answer-buttons"></div>
+            <button id="next-btn">Proxima</button>
         </div>
     </div>
 </body>
 </html>
-<script src="quiz.js"></script>
+<script src="../public/js/quiz.js"></script>

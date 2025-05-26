@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    width: 80%;
+    margin:auto;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header{
+    height:70px;
+    border-bottom: 2px solid #000;
+    background-color: #14213D;
+    
+}
+
+.header.navbar{
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.elementos1{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    list-style: none; /* tira os pontinhos da lista*/
+    color: white;
+    gap: 50px; /* da um espaço entre os itens*/
+    padding-left: 125px;
+
+}
+
+.logo img{
+ width: fit-content;/* se adapta ao tamanho da navbar*/
+ height: 65px;
+ padding-top: 5px;
+}
+
+.elementos2{
+    display: flex;
+    justify-content: end;
+    gap: 35px;
+    list-style: none;
+
+}
+
+.header.elementos2{
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+/* final do header*/
+
+
+.intro{
+     background-color:#FCA311;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    padding: 30px;
+}
+
+.intro h1{
+    font-size: 220%;
+    color: #14213D;
+    border-bottom: 2px solid #14213D;
+    padding-bottom: 20px;
+}
+
+.intro p{
+    font-size: 125%;
+    color: #14213D;
+    font-weight: 500;
+}
+
+.intro button{
+    width: 20%;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #14213D;
+    color: #E5E5E5;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+.app{
+    background-color:#FCA311;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    padding: 30px;
+}
+
+.app h1{
+    font-size: 200%;
+    color: #14213D;
+    border-bottom: 2px solid #14213D;
+    padding-bottom: 20px;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.app h2{
+    font-size: 175%;
+    color: #000;
+    font-weight: 700;
+}
+
+.btn{
+    background-color: #14213D;
+    border: 1px solid #14213D;
+    color: #E5E5E5;
+    font-weight: 500;
+    font-size: 18px;
+    width: 90%;
+    padding: 10px;
+    margin: 10px ;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]){
+    background-color:  #273c6a;
+    color: #E5E5E5;
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+    background: #000;
+    color: #E5E5E5;
+    font-weight: 600;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    /* display: none; */
+}
+
+
+.correct{
+    background-color: rgb(32, 129, 32);
+    color: #E5E5E5;
+}
+
+.incorrect{
+    background-color: rgb(129, 37, 37);
+    color: #E5E5E5;
+}
+
+

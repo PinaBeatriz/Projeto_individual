@@ -53,7 +53,8 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             commodi rerum illo, accusamus itaque dolorum? <br />Fugit
             accusantium fugiat ea consectetur voluptate, doloremque voluptas
-            omnis necessitatibus praesentium? Similique esse deleniti debitis.
+            omnis necessitatibus praesentium?
+            Similique esse deleniti debitis.
           </p>
         </div>
       </div>
@@ -67,23 +68,18 @@
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa commodi
           rerum illo, accusamus itaque dolorum?<br />
           Fugit accusantium fugiat ea consectetur voluptate, doloremque voluptas
-          omnis necessitatibus praesentium? Similique esse deleniti debitis.
+          omnis necessitatibus praesentium? <br>
+          Similique esse deleniti debitis.
         </p>
       </div>
     </div>
-
     <div class="carrossel">
       <h3>FASES DE GRADUAÇÃO</h3>
-      
       <h3>Fase 1: Capoeira Infantil com até 14 anos</h3>
       <br />
-
-     
       <div class="parte2">
           <div class="parte3"> 
       <div class="parte1">
-      
-        
           <div class="slider">
             <div class="slide">
               <img
@@ -117,7 +113,7 @@
     slides[index].classList.add("active"); // Adiciona a classe 'active' ao slide atual
   }
 
-  function nextSlide() {
+  function nextSlide() {//nextSlide(): Move para o próximo slide, ou volta ao primeiro se chegar ao fim.
     currentSlide++;
     if (currentSlide >= slides.length) {
       currentSlide = 0; // Volta ao primeiro slide
@@ -125,7 +121,7 @@
     showSlide(currentSlide);
   }
 
-  function prevSlide() {
+  function prevSlide() {  //prevSlide(): Move para o slide anterior, ou volta ao último se chegar ao início.
     currentSlide--;
     if (currentSlide < 0) {
       currentSlide = slides.length - 1; // Volta ao último slide
@@ -134,24 +130,11 @@
   }
 
   // Alternar slides automaticamente 
-  setInterval(nextSlide, 3000); 
-
-  // Ou para controlar com botões
-  /*
-document.getElementById('botao_proximo').addEventListener('click', nextSlide);
-document.getElementById('botao_anterior').addEventListener('click', prevSlide);
-*/
+  setInterval(nextSlide, 3000);   //setInterval(nextSlide, 3000): Chama nextSlide a cada 3 segundos
 
   showSlide(0); // Mostra o primeiro slide inicialmente
 
-  //HTML: A estrutura define o contêiner da slider e cada slide com imagens.
-  //JavaScript:
-  //document.querySelectorAll('.slide'): Seleciona todos os elementos com a classe "slide".
-  //showSlide(index): Remove a classe "active" de todos os slides e a adiciona ao slide no índice especificado.
-  //nextSlide(): Move para o próximo slide, ou volta ao primeiro se chegar ao fim.
-  //prevSlide(): Move para o slide anterior, ou volta ao último se chegar ao início.
-  //setInterval(nextSlide, 3000): Chama nextSlide a cada 3 segundos
-
+ //botão saiba mais
   function Clicar(){
     var saiba = document.getElementById("saiba")
     

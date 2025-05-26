@@ -153,6 +153,9 @@ background-color: #1e376e;
   object-fit: cover;
 }
 
+.formulario .msglog{
+    padding-left: 20%;
+}
 .msglog p{
  font-weight: bold;
 }
