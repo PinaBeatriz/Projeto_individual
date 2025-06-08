@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+    font-family: 'Raleway', sans-serif;
+       overflow-x: hidden;   /*Evita rolagem horizontal troca*/
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    margin:0;
+    justify-content: space-around;
+    align-items: center;
+    height:10%;
+    border-bottom: 2px solid #000;
+    background-color: #000;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.elementos1{
+    display: flex;
+    align-items: center; 
+    list-style: none; 
+    color: white;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.logo img{
+ max-width: 100%;
+ height: 65px;
+ padding-top: 5px;
+}
+
+.elementos2{
+    display: flex;
+    gap: 20%;
+    margin-left: 100px;
+}
+/* final do header*/
+
+
+.principal{
+    height: 100vh;
+    width: 100vw;
+    background-color:#E5E5E5;
+    justify-content: space-between;
+    display: flex;
+}
+
+.imgprincipal {
+    height: 80%;
+    width: 15%;
+    background-color: #E5E5E5;
+}
+
+.parent {
+    height: 75%;
+    width: 70%;
+    background-color: #E5E5E5;
+    border: 2px solid #000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 9%;
+    box-shadow: 0 0 35px  rgb(28, 27, 27);
+}
+
+.foto{
+    height: 80%;
+    width: 40%;
+    background-color: #E5E5E5;
+    display: flex;
+}
+
+.foto img{
+    height: 101%;
+    width: 90%;
+    border-radius: 10px;
+    border: 4px solid #000;
+    perspective: 1000;
+    object-fit: cover;
+}
+
+.barra{
+    height: 85%;
+    width: 5px;
+    background-color: #000;
+    margin-left: -3%;
+}
+
+.hist{
+    height: 80%;
+    width: 35%;
+    background-color: #E5E5E5;
+    border: 4px solid #000;
+    border-radius: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.hist h1{
+    display: flex;
+    justify-content: center
+}
+
+.hist p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.principalimg {
+    height: 80%;
+    width: 15%;
+    display: flex;
+    margin-top: 162px;
+}
+
+
+.principalimg img{
+    margin-left: -15%;
+    margin-bottom: -40%;
+}
+
+.particao{
+    height: 10vh;
+    width: 100vw;
+    background-color: #671414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.particao img{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.principalP2{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/instrumentosFundo.png);
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.container{
+    background-color: #14213D;
+    height: 80%;
+    width: 80%;
+    border: 2px solid #000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 35px  rgb(28, 27, 27);
+    margin-top: 5%;
+} 
+
+.box1{
+    height: 80%;
+    width: 22%;
+    background-color: #E5E5E5;
+    display: flex;
+    border: 5px solid #FCA311;
+    border-radius: 10px;
+}
+
+.box1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.box2{
+    height: 80%;
+    width: 35%;
+    background-color: #E5E5E5;
+    border: 5px solid #FCA311;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box2 h1{
+    display: flex;
+    justify-content: center
+}
+
+
+.box2 p{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+.box3{
+    height: 80%;
+    width: 22%;
+    background-color: #E5E5E5;
+    display: flex;
+    border: 5px solid #FCA311;
+    border-radius: 10px;
+}
+
+.box3 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+} 
+
+.proj{
+    height: 90vh;
+    width: 100vw;
+    background-color: #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container2{
+    background-color: #671414;
+    height: 80%;
+    width: 80%;
+    border: 2px solid #000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 35px  rgb(28, 27, 27);
+    margin-top: 5%;
+}
+
+.box5{
+    height: 80%;
+    width: 50%;
+    border: 5px solid #E5E5E5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #E5E5E5;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.box5 p{
+    display: flex;
+    margin-left: 2%;
+    font-size: 22px;
+    margin-right: 2%;
+}
+
+.box6{
+    height: 80%;
+    width: 40%;
+    display: flex;
+    border: 5px solid #E5E5E5;
+    border-radius: 10px;
+}
+
+.box6 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+footer {
+  width: 100vw;
+  height: 25vh;
+  background-color: #000;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sobre {
+  width: 40%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  border-radius: 8px;
+  margin-top: 35px;
+    align-items: center;    
+}
+.contato{
+  width: 40%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  border-radius: 8px;
+  margin-top: 35px;
+  align-items: center;    
+}
+
+.pags{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-around;
+}
+
+.sobre h2, .contato h2 {
+  font-size: 20px;
+  color: #FCA311;
+  margin-bottom: 10px;
+}
+
+.sobre p{
+  font-size: 14px;
+  color: #E5E5E5;
+}
+
+.contato a{
+  font-size: 14px;
+  color: #E5E5E5;
+  text-decoration: none;
+ 
+}
+
+.contato ul {
+    list-style: none;
+ font-weight: bold;
+}
+
+
+.contato #list2 {
+  list-style: none;
+  padding: 0;
+  margin-left: 5%;
+  font-weight: bold;
+}
+
+.contato li {
+  margin-bottom: 5px;
+}

@@ -5,27 +5,24 @@ body{
     margin: 0;
     padding: 0;
     background-color: #E5E5E5;
-    overflow: hidden;
+    min-height: 100vh; 
     font-family: 'Raleway', sans-serif;
+    overflow: hidden; /* Evita rolagem horizontal troca*/
 }
 
-.navbar{
-    display: flex;
-    width: 80%;
-    margin:auto;
-    justify-content: space-between;
-    align-items: center;
-    
-}
 
 .header{
     height:70px;
     border-bottom: 2px solid #000;
-    background-color: #14213D;
-    
+    background-color: #000;
+    display: flex;
 }
 
-.header.navbar{
+.navbar{
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin:auto;
     justify-content: space-between;
     align-items: center;
     height: 100%;
@@ -35,32 +32,29 @@ body{
     text-decoration: none;
     color: white;
     font-weight: bold;
-    
+    font-size: 1.1em;
 }
+
 
 .elementos1{
     display: flex;
     align-items: center; 
-    justify-content: space-between;
-    list-style: none; /* tira os pontinhos da lista*/
+    list-style: none; 
     color: white;
-    gap: 50px; /* da um espaço entre os itens*/
-    padding-left: 125px;
-
+    gap: 30px; 
+    padding: 0;
+    margin: 0;
 }
 
 .logo img{
- width: fit-content;/* se adapta ao tamanho da navbar*/
- height: 65px;
+ max-width: 100%;
+ height: 55px;
  padding-top: 5px;
 }
 
 .elementos2{
     display: flex;
-    justify-content: end;
-    gap: 35px;
-    list-style: none;
-
+    gap: 20px;
 }
 
 .header.elementos2{
@@ -70,79 +64,119 @@ body{
 }
 /* final do header*/
 
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/instrumentosFundo.png);
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
 
 .intro{
-     background-color:#FCA311;
-    width: 90%;
-    max-width: 600px;
-    margin: 100px auto 0;
-    padding: 30px;
+    background-color:#FCA311;
+    width: 40%;
+    margin-top: -8%;
+    border-radius: 10px;
+    border: 5px solid #14213D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 35px  rgb(28, 27, 27);
 }
 
 .intro h1{
-    font-size: 220%;
+    font-size: 50px;
     color: #14213D;
     border-bottom: 2px solid #14213D;
-    padding-bottom: 20px;
 }
 
 .intro p{
-    font-size: 125%;
+    font-size: 18px;
     color: #14213D;
-    font-weight: 500;
+    font-weight: 700;
+    margin-bottom: 6%;
+    display: flex;
+    margin-left: 8%;
+    margin-right: 2%;
 }
 
 .intro button{
-    width: 20%;
-    height: 30px;
+    width: 25%;
+    height: 40px;
     border-radius: 6px;
     background-color: #14213D;
     color: #E5E5E5;
-    font-size: 100%;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 800;
 }
+
+.intro button:hover {
+    background-color: #1f325b;
+    box-shadow: 10px 8px 8px gray;
+    color: #d40404;
+}
+
 
 .app{
     background-color:#FCA311;
-    width: 90%;
-    max-width: 600px;
-    margin: 100px auto 0;
-    padding: 30px;
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -5%;
+    border-radius: 10px;
+    border: 8px solid #14213D;
+    box-shadow: 0 0 35px  rgb(28, 27, 27);
 }
 
 .app h1{
-    font-size: 200%;
+    font-size:40px;
+    text-decoration: underline;
     color: #14213D;
-    border-bottom: 2px solid #14213D;
-    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
 }
 
 .quiz{
-    padding: 20px 0;
+   width: 90%;
+   height: 80%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-left: 5%;
 }
 
-.app h2{
-    font-size: 175%;
+.quiz h2{
+    font-size: 28px;
     color: #000;
     font-weight: 700;
+    margin: 2%;
 }
 
 .btn{
-    background-color: #14213D;
+   background-color: #14213D;
     border: 1px solid #14213D;
     color: #E5E5E5;
     font-weight: 500;
-    font-size: 18px;
-    width: 90%;
+    font-size: 20px;
+    width: 25vw; 
     padding: 10px;
-    margin: 10px ;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
 }
 
 .btn:hover:not([disabled]){
-    background-color:  #273c6a;
+    background-color: #273c6a;
     color: #E5E5E5;
 }
 
@@ -154,23 +188,28 @@ body{
     background: #000;
     color: #E5E5E5;
     font-weight: 600;
-    width: 150px;
-    border: 0;
-    padding: 10px;
-    margin: 20px auto 0;
-    border-radius: 4px;
-    cursor: pointer;
-    /* display: none; */
+    width: 12vw;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-top: 4%;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+    cursor: pointer; 
+    display: none; 
 }
 
+#next-btn:hover{
+    background-color: #3a3939;
+    color: #E5E5E5;
+}
 
 .correct{
-    background-color: rgb(32, 129, 32);
+    background-color: rgb(44, 161, 44);
     color: #E5E5E5;
 }
 
 .incorrect{
-    background-color: rgb(129, 37, 37);
+    background-color: rgb(182, 41, 41);
     color: #E5E5E5;
 }
 

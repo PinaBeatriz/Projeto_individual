@@ -3,8 +3,7 @@ function entrar() {
         var senhaVar = input_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            //mensagem de campos em branco  
-
+            div_msg.innerHTML = "Preencha todos os campos para cadastrar";
             return false;
         }
 
@@ -31,10 +30,10 @@ function entrar() {
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL = json.email;
                     sessionStorage.NOME = json.nome;
-                    sessionStorage.ID = json.id;
-                    setTimeout(function () {
-                        window.location = "quiz.html"; // caminho para o arquivo do quiz
-                    }, 1000); // apenas para exibir o loading
+                    sessionStorage.ID_USER = json.id_user;
+                     setTimeout(function () {
+                        window.location = "jogos.html"; // caminho para o arquivo do quiz
+                     }, 1000); // apenas para exibir o loading
 
                 });
 

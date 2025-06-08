@@ -4,13 +4,18 @@ function validarSessao() {
 
 
     if (email != null && nome != null) {
-        console.log("Usuario autenticado") // verifica se o session storage esta vazio se não ta vazio tem conexão entao userr autenticado
+        cadastro.innerHTML = "Olá, " + nome;
+        cadastro.removeATTribute("href")
+        // console.log("Usuario autenticado") // verifica se o session storage esta vazio se não ta vazio tem conexão entao userr autenticado
     } else {
-        window.location = "../login.html"; // se não manda para o login
+        quiz.style.display = "none";
     }
 }
 
 function limparSessao() {// limpa a session storage e manda para o login
     sessionStorage.clear();
+    window.location = "../index.html";
+    window.location = "../sobreMim.html";
+    window.location = "../cadastro.html";
     window.location = "../login.html";
 }
