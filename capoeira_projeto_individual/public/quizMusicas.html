@@ -7,30 +7,34 @@
     <title>CapoQuiz</title>
 </head>
 <body>
-    <!-- HEADER INICIO -->
-      <div class="header">
-      <div class="navbar">
-        <div class="logo"> <img src="./assets/Log_branca.png" alt=""/></div>
-        <ul class="elementos1">
+     <!-- HEADER INICIO -->
+  <header>  
+     <div class="navbar">
+        <div class="logo">
+          <img src="./assets/Log_branca.png" alt="" />
+          <p id="pina">Pina Meia-Lua</p>
+        </div>
+        <ul class="elementos2">
           <li><a href="./dashboard.html">DASH</a></li>
           <li><a href="./jogos.html">JOGOS</a></li>
           <li><a href="./index.html">SAIR</a></li>
         </ul>
       </div>
-    </div>
+      </header> 
+  
     <!-- HEADER FINAL -->
      
 <!-- Tela de introdução -->
  <div class="container">
     <div class="intro">
-        <h1>CapoQuiz</h1>
+        <h1>Capomusiquiz</h1>
         <p>Entre na roda do conhecimento e gingue no ritmo das perguntas e respostas sobre a nossa arte marcial brasileira!</p>
         <button id="comecar-btn" onclick="iniciar()">Começar</button>
     </div>
 
     <!-- Tela do quiz -->
     <div class="app" style="display: none;">
-        <h1>CapoQuiz</h1>
+        <h1>Capomusiquiz</h1>
         <div class="quiz">
             <h2 id="question">Pergunta</h2>
             <div id="answer-buttons"></div>
@@ -41,4 +45,4 @@
 
 </body>
 </html>
-<script src="./js/quizGeral.js"></script>
+<script src="./js/quizMusica.js"></script>

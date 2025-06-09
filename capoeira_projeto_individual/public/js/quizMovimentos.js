@@ -151,14 +151,19 @@ function selectAnswer(evento) {
 }
 
 // Função que exibe o resultado final do quiz
+// Função que exibe o resultado final do quiz
 function mostrar_resultado() {
     resetState(); // Limpa as respostas da última questão
     // Mostra quantas questões o usuário acertou
-    questao_elemento.innerHTML = `Você acertou ${acertos} de ${questoes_embaralhadas.length} perguntas!`;
-    botaoproximo.innerHTML = "Jogar Novamente"; // Altera o botão para reiniciar o quiz
+    let pontos = acertos * 100;
+    let porcentagemAcertos = (acertos /4)*100;
+    questao_elemento.innerHTML = `Você marcou ${pontos} pontos e teve ${porcentagemAcertos}% de acertos!`;
+    botaoproximo.innerHTML = "Ver resultados"; // Altera o botão para reiniciar o quiz
     botaoproximo.style.display = "block"; // Exibe o botão
 
-    botaoproximo.onclick = startQuiz; // Define que ao clicar, o quiz reinicia
+    botaoproximo.onclick = function () {
+        window.location.href = "dashboard.html";
+    };
 
     let fkQuiz = 3;
 
