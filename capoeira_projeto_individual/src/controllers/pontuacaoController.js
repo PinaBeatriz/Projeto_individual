@@ -5,12 +5,13 @@ function marcarPontuacao(req, res){
     var fkUser = req.body.fkUser;
     var erros = req.body.errosServer;
     var fkQuiz = req.body.fkQuizServer;
+    var pontos = req.body.pontosServer;
 
 
     if (acertos == undefined || erros == undefined) {
         res.status(400).send("Sua pontuação está undefined!");
     }else{
-        pontuacaoModel.marcarPontuacao(fkUser, acertos, erros, fkQuiz)
+        pontuacaoModel.marcarPontuacao(fkUser, acertos, erros, fkQuiz,pontos)
         .then(
             function (resultado){
                 res.json(resultado);

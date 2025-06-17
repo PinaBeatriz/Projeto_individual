@@ -63,7 +63,7 @@ body{
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-color: #2f0202;
+    background-color: #ffffff;
     justify-content:center;
     flex-direction: column;
 }
@@ -71,7 +71,7 @@ body{
 .container{
     width: 100%;
     height: 100%;
-    background-color: #671414;
+    background-color:       #ffffff;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -89,7 +89,8 @@ body{
     flex-direction: column;
     align-items: center;
     perspective: 1000px; /*parece realmente virar no espaço 3D*/
-    border: 5px solid #E5E5E5;
+    border: 5px solid #000000;
+    box-shadow: 0 0 35px rgb(40, 39, 39);
 }
 
 .nome{

@@ -46,8 +46,8 @@ const questoes = [
 ]
 
 // Seleciona elementos do  que serão usados para exibir perguntas, respostas e botões
-const questao_elemento = document.getElementById("question"); // Elemento onde a pergunta será mostrada
-const botao_resposta = document.getElementById("answer-buttons"); // Div onde os botões de resposta serão inseridos
+const questao_elemento = document.getElementById("question"); //  onde a pergunta será mostrada
+const botao_resposta = document.getElementById("answer-buttons"); // Div onde os botões de resposta serão colocados
 const botaoproximo = document.getElementById("next-btn"); // Botão para passar para a próxima pergunta
 
 let questao_atual_index = 0; // Índice da questão atual
@@ -57,12 +57,12 @@ let questoes_embaralhadas = []; // Array para armazenar as questões embaralhada
 
 // Função que embaralha as questões usando Math.round para gerar índices aleatórios
 function embaralharQuestoes(array) {
-    const novoArray = [...array]; // Cria uma cópia do array original para não modificar o original
+    const novoArray = [...array]; // Cria uma cópia do array original para não modificar o original e embaralha os itens 
     for (let i = novoArray.length - 1; i > 0; i--) {
         const j = Math.round(Math.random() * i); // Gera índice aleatório entre 0 e i
         const temp = novoArray[i];
         novoArray[i] = novoArray[j];
-        novoArray[j] = temp; // Troca os elementos de posição
+        novoArray[j] = temp; 
     }
     return novoArray; // Retorna o array embaralhado
 }
@@ -155,7 +155,7 @@ function mostrar_resultado() {
     // Mostra quantas questões o usuário acertou
     let pontos = acertos * 100;
     let porcentagemAcertos = (acertos /4)*100;
-    questao_elemento.innerHTML = `Você marcou ${pontos} pontos e teve ${porcentagemAcertos}% de acertos!`;
+    questao_elemento.innerHTML = `Você teve ${porcentagemAcertos}% de acertos! Veja os resultados`;
     botaoproximo.innerHTML = "Ver resultados"; // Altera o botão para reiniciar o quiz
     botaoproximo.style.display = "block"; // Exibe o botão
 
@@ -169,7 +169,8 @@ function mostrar_resultado() {
         acertosServer: acertos,
         errosServer : erros,
         fkUser: sessionStorage.ID_USER,
-        fkQuizServer: fkQuiz
+        fkQuizServer: fkQuiz,
+        pontosServer: pontos,
     }
 
     fetch("/pontuacao/marcarPontuacao", { 

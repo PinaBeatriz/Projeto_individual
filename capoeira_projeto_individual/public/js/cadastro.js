@@ -6,7 +6,7 @@ function cadastrar() {
 
   if (nomeVar != "" && emailVar != "" && senhaVar != "" && confirmacaoSenhaVar != ""){
     if (senhaVar.length >= 6 && senhaVar.length <= 15) {
-      if (!emailVar.includes(" ") && emailVar.includes("@")){
+      if (!emailVar.includes(" ") && emailVar.includes("@") && emailVar.includes(".com")){
           if (senhaVar == confirmacaoSenhaVar) {
             fetch("/usuarios/cadastrar", {
               method: "POST",

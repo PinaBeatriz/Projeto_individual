@@ -59,8 +59,8 @@
             treinavam em meio à dor da escravidão e à luta pela liberdade. <br>Muito mais que uma luta ou dança, a capoeira é memória viva, é herança
             ancestral. Mesmo criminalizada por anos, resistiu nos quilombos, nas rodas e nos cantos, transmitida de mestre para aluno, geração após
              geração. Hoje, reconhecida pela UNESCO como Patrimônio Cultural da Humanidade, a capoeira se firma como uma poderosa ferramenta de
-              educação, acolhimento e transformação social. Em cada toque do berimbau, em cada ginga e canto, ela proclama: "Eu estou viva. 
-              E eu me lembro."
+              educação, acolhimento e transformação social. Em cada toque do berimbau, em cada ginga e canto, ela proclama "Eu estou viva
+               e eu me lembro."
           </p>
         </div>
       </div>
@@ -82,7 +82,7 @@
     <div class="carrossel">
       <h3>FASES DE GRADUAÇÃO</h3>
       <p>Fase 1: Capoeira Infantil com até 14 anos </p><br><br>
-      <p id="link">As informações abaixo sobre graduação são da <a href="https://grupocordaodeouro.com.br/graduacao/" target="_blank" rel="noopener noreferrer">Escola Cordão de Ouro</a></p>
+      <p id="link">As informações abaixo sobre graduação são da <a id="ouro" href="https://grupocordaodeouro.com.br/graduacao/" target="_blank" rel="noopener noreferrer">Escola Cordão de Ouro</a></p>
       <div class="parte2">
           <div class="parte3"> 
       <div class="parte1">
@@ -276,7 +276,7 @@
   const slides = document.querySelectorAll(".slide");  
 
   // Define qual é o slide atual, começando pelo 0 (o primeiro)
-  let currentSlide = 0;
+  let slide_atual = 0;
 
   // Função para mostrar um slide específico
   function showSlide(index) {
@@ -292,15 +292,15 @@
   // Função para ir para o próximo slide
   function nextSlide() {
     // Aumenta 1 no número do slide atual
-    currentSlide++;
+    slide_atual++;
     
     // Se chegar no final, volta para o primeiro slide
-    if (currentSlide >= slides.length) {
-      currentSlide = 0;
+    if (slide_atual >= slides.length) {
+      slide_atual = 0;
     }
     
     // Mostra o slide atual
-    showSlide(currentSlide);
+    showSlide(slide_atual);
   }
 
   // Função para ir para o slide anterior

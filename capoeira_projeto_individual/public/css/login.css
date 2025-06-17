@@ -103,13 +103,15 @@ body{
 .formulario .logo{
   display: flex;
   margin-bottom: 0px;
-  margin-left: 110px;
-  padding-top: 50px;
+  margin-left: 120px;
+  height: 100px;
+  width: 100px;
 
 }
 
 .formulario .logo img{
   height: 100px;
+
 }
 
 .formulario .mensagem{

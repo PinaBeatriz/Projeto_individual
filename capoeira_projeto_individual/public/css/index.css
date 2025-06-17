@@ -167,6 +167,7 @@ body{
     flex-direction: column;
 }
 
+
 .principal_titulo h1{
     margin-left: 27%;
     font-weight:700;
@@ -179,6 +180,18 @@ body{
     font-size: 20px;
     margin-top: 0;
     margin-right: 2%;
+}
+
+.frase2 #ouro{
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+    color: #E5E5E5;
+}
+
+#ouro:visited{
+    color: #E5E5E5;
 }
 
 .carrossel{
@@ -221,7 +234,7 @@ body{
 .slider {
   width: 75%;
   height: 100%;
-  overflow: hidden; /* Oculta slides que não estão visíveis */ /* Efeito de sobreposição com sombras múltiplas */
+  overflow: hidden; /* Oculta slides que não estão visíveis */ 
 }
 
 .slide {
@@ -330,7 +343,7 @@ body{
      height: 100%;
      text-align: center;
      transition: transform 0.7s;
-     transform-style: preserve-3d;/* Mantém a posição dos filhos em 3D ao rotacionar necessário para o efeito flip funcionar */
+     transform-style: preserve-3d;/* Mantém a posição dos filhos em 3D ao girar, importante para o efeito flip funcionar */
 }
 
 .card:hover .cardgiratorio {

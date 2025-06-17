@@ -2,6 +2,8 @@ const fkUser = sessionStorage.ID_USER;
   const grafico = document.getElementById("grafico").getContext("2d");
   let chartGrafiico;
 
+  var pontos = 0;
+
   function carregarGrafico() {
     let fkQuiz = selectQuiz.value;
 
@@ -10,12 +12,19 @@ const fkUser = sessionStorage.ID_USER;
     fetch(`/pontuacao/buscarPontuacao/${fkUser}/${fkQuiz}`)
       .then((response) => response.json())
       .then((data) => {
-        if (data.length === 0) {
-          msg.innerHTML = `Você não possui pontuações nesse quiz.`;
+        console.log(data)
+       
+        if (data.length == 0) {
+          console.log('dados vazio')
+          var mensagem = document.getElementById('msg')
+          mensagem.innerHTML = `Você não possui pontuações nesse quiz.`;
           if (chartGrafiico) {
             chartGrafiico.destroy();
           }
           return;
+        }else{
+          pontos = data[data.length - 1].qtd_acertos;
+          divpontos.innerHTML = pontos *100;
         }
 
         const labels = [];
@@ -40,14 +49,14 @@ const fkUser = sessionStorage.ID_USER;
               {
                 label: "Acertos",
                 data: acertos,
-                // backgroundColor: "#efaa3c",
+                backgroundColor: "#efaa3c",
                 borderColor: "#FCA311",
                 borderWidth: 5,
               },
               {
                 label: "Erros",
                 data: erros,
-                // backgroundColor: "rgba(255, 0, 0, 0.2)",
+                backgroundColor: "#14213D",
                 borderColor: "#2e4982",
                 borderWidth: 5,
               },

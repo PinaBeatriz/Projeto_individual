@@ -157,7 +157,7 @@ function mostrar_resultado() {
     // Mostra quantas questões o usuário acertou
     let pontos = acertos * 100;
     let porcentagemAcertos = (acertos /4)*100;
-    questao_elemento.innerHTML = `Você marcou ${pontos} pontos e teve ${porcentagemAcertos}% de acertos!`;
+    questao_elemento.innerHTML = `Você teve ${porcentagemAcertos}% de acertos! Veja os resultados`;
     botaoproximo.innerHTML = "Ver resultados"; // Altera o botão para reiniciar o quiz
     botaoproximo.style.display = "block"; // Exibe o botão
 
@@ -171,7 +171,8 @@ function mostrar_resultado() {
         acertosServer: acertos,
         errosServer : erros,
         fkUser: sessionStorage.ID_USER,
-        fkQuizServer: fkQuiz
+        fkQuizServer: fkQuiz,
+        pontosServer: pontos,
     }
 
         fetch("/pontuacao/marcarPontuacao", { 
